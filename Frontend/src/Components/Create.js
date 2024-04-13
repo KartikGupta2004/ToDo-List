@@ -44,7 +44,9 @@ function Create() {
     const json = await response.json();
     if (!response.ok) {
       setError(json.error);
-      setEmptyFields(json.emptyFields)
+      if (json.emptyFields) {
+        setEmptyFields(json.emptyFields);
+      }
     }
     if (response.ok) {
       setTitle("");
@@ -58,6 +60,12 @@ function Create() {
     }
   };
 
+  const adjustTextareaHeight = (event) => {
+    const textarea = event.target;
+    textarea.style.height = "auto";
+    textarea.style.height = textarea.scrollHeight + "px";
+  };
+
   const handleClick = (e) => {
     e.preventDefault();
     setTitle("");
@@ -68,29 +76,28 @@ function Create() {
   return (
     <>
       <ToastContainer/>
-      <div className="min-h-screen flex flex-col justify-center items-center bg-HomeBg text-white">
+      <div className="min-h-screen py-5 flex flex-col justify-center items-center bg-HomeBg text-white">
         <h1 className="text-3xl font-semibold mb-2">Add a New To Do</h1>
         <form className="create flex flex-col bg-orange-200 px-12 py-16 rounded-lg text-black">
-          <input
-            type="text"
+          <textarea
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            className={`text-2xl px-3 py-2 mb-5 rounded-md border-2 border-gray-300 ${emptyFields.includes('Title') ? 'error' : ''}`}
+            className={`text-2xl resize-none h-fit w-full mr-3 overflow-hidden outline-none px-3 py-2 mb-5 rounded-md border-2 border-gray-300 ${emptyFields.includes('Title') ? 'error' : ''}`}
             placeholder="Title"
+            onInput={adjustTextareaHeight}
           />
           <input
             type="date"
             value={date}
             onChange={(e) => setDate(e.target.value)}
-            className={`text-2xl px-3 py-2 mb-5 rounded-md border-2 border-gray-300 ${emptyFields.includes('Date') ? 'error' : ''}`}
+            className={`text-2xl px-3 py-2 mb-5 rounded-md border-2 outline-none border-gray-300 ${emptyFields.includes('Date') ? 'error' : ''}`}
           />
           <textarea
-            className={`text-2xl px-3 py-2 mb-5 rounded-md border-2 border-gray-300 ${emptyFields.includes('Note') ? 'error' : ''}`}
+            className={`resize-none h-fit w-full outline-none text-2xl px-3 py-2 mb-5 rounded-md border-2 border-gray-300 overflow-hidden ${emptyFields.includes('Note') ? 'error' : ''}`}
             placeholder="Note"
             value={note}
+            onInput={adjustTextareaHeight}
             onChange={(e) => setNote(e.target.value)}
-            cols="30"
-            rows="1"
             
           />
           <div className="flex mt-3">

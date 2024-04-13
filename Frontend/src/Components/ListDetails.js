@@ -243,7 +243,7 @@ const ListDetails = ({ list }) => {
                       onInput={adjustTextareaHeight}
                       value={step.text}
                       onChange={(e) => handleTextChange(index, e.target.value)}
-                      className={`resize-none h-fit w-full border-none outline-none ${
+                      className={`resize-none h-fit w-full mr-3 border-none outline-none ${
                         step.completed ? "line-through" : ""
                       }`}
                     />

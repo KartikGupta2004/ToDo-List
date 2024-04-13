@@ -5,7 +5,7 @@ import Footer from "./Components/Footer"
 import Navbar from "./Components/Navbar"
 import Login from "./Components/Login"
 import SignUp from "./Components/SignUp"
-import AboutUs from './Components/AboutUs'
+import AboutMe from './Components/AboutMe'
 import Create from './Components/Create'
 import AllLists from './Components/AllLists'
 import Update from './Components/Update'
@@ -23,7 +23,7 @@ function App() {
           />
         <Route
           path="/about"
-          element={<AboutUs/>}
+          element={<AboutMe/>}
           />
         <Route
           path="/create"
