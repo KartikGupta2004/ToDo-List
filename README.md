@@ -18,8 +18,6 @@
 - [Applications](#applications)
 - [Project Setup](#project-setup)
 - [Usage](#usage)
-- [Team Members](#team-members)
-- [Mentors](#mentors)
 - [Screenshots](#screenshots)
 
 
@@ -34,9 +32,9 @@ ToDo is an easy to use web application for people who want their goal to be acco
 
 ## 🔗Links <a id="links"></a>
 
-<!-- - [GitHub Repository](https://github.com/KartikGupta2004/ToDo)
-- [Demo Video](https://drive.google.com/drive/folders/1-7PPo7TUaF-L6DGlMSSJ0DKw4iizCcOr)
-- [Drive Link to Screenshots of your project](https://drive.google.com/drive/folders/19_EKlzi2csSFr5lsZF5LhincC-2X4rWg?usp=drive_link) -->
+- [GitHub Repository](https://github.com/KartikGupta2004/ToDo-List)
+<!-- - [Demo Video](https://drive.google.com/drive/folders/1-7PPo7TUaF-L6DGlMSSJ0DKw4iizCcOr)-->
+- [Drive Link to Screenshots of the project](https://drive.google.com/file/d/1GwupswH9Ho_wfyDuJLaVYtx4znGka8to/view?usp=sharing)
 
 ## 🤖Tech-Stack <a id="tech-stack"></a>
 
@@ -47,8 +45,8 @@ ToDo is an easy to use web application for people who want their goal to be acco
 - CSS<a href="https://www.w3.org/TR/CSS/" title="CSS3"><img src="https://github.com/get-icon/geticon/raw/master/icons/css-3.svg" alt="CSS3" width="21px" height="21px"></a>
 -Tailwind CSS <a href="https://tailwindcss.com/" title="Tailwind CSS"><img src="https://github.com/get-icon/geticon/raw/master/icons/tailwindcss-icon.svg" alt="Tailwind CSS" width="21px" height="21px"></a>
 #### Back-end
-- ExpressJS <a href="https://expressjs.com/" title="Node.js"><img src="https://github.com/get-icon/geticon/raw/master/icons/nodejs-icon.svg" alt="Node.js" width="21px" height="21px"></a>
-- NodeJS <a href="https://nodejs.org/" title="Node.js"><img src="https://github.com/get-icon/geticon/raw/master/icons/nodejs-icon.svg" alt="Node.js" width="21px" height="21px"></a>
+- ExpressJS <a href="https://expressjs.com/" title="Express.js"><img style="background-color: white; padding: 3px;" src="https://cdn.icon-icons.com/icons2/2699/PNG/512/expressjs_logo_icon_169185.png" alt="Express.js" height="20px"></a>
+- NodeJS <a href="https://nodejs.org/" title="Node.js"><img src="https://github.com/get-icon/geticon/raw/master/icons/nodejs-icon.svg" alt="Node.js" width="21px" height="21px" ></a>
 #### Database
 - MongoDB<a href="https://www.mongodb.org/" title="MongoDB"><img src="https://github.com/get-icon/geticon/raw/master/icons/mongodb-icon.svg" alt="MongoDB" width="21px" height="21px"></a>
 
@@ -57,14 +55,14 @@ ToDo is an easy to use web application for people who want their goal to be acco
 Fully Implemented features of the project:
 
 - [x] Successful implementation of the database.
-- [x] Create, Update, Delete Operations working perfectly
+- [x] Create, Update, Delete Operations on List
 - [x] User Authentication
 - [x] Login with Google option
 
 ## 🔮Future Scope <a id="future-scope"></a>
 
 - Adding reminders and notifications.
-- On marking the list complete add a sound.
+- Add a sound on creating,updating or deleting the list.
 
 ## 💸Applications <a id="applications"></a>
 
@@ -76,7 +74,7 @@ Fully Implemented features of the project:
 ## 🛠Project Setup <a id="project-setup"></a>
 
 First step is to clone the repository <br>
-``` git clone https://github.com/KartikGupta2004/ToDo```
+``` https://github.com/KartikGupta2004/ToDo-List.git ```
 
 Have the latest version of node js and react app.
 ```
@@ -101,5 +99,5 @@ For frontend execute the command:<br>
 
 ## 📱Screenshots <a id="screenshots"></a>
 
-<!-- [Screenshots of the Project](https://drive.google.com/drive/folders/19_EKlzi2csSFr5lsZF5LhincC-2X4rWg?usp=drive_link) -->
+[Screenshots of the Project](https://drive.google.com/file/d/1GwupswH9Ho_wfyDuJLaVYtx4znGka8to/view?usp=sharing)
 
