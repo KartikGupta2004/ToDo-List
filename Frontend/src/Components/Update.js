@@ -17,7 +17,7 @@ const Update = () => {
 
   useEffect(() => {
       const fetchLists = async () => {
-        const response = await fetch(`/api/lists/${id}`,{
+        const response = await fetch(`https://todo-list-backend-694w.onrender.com/api/lists/${id}`,{
           headers:{
             method: "GET",
             'Authorization':`Bearer ${user.token}`
@@ -62,7 +62,7 @@ const Update = () => {
       note: noteToSend
     };
 
-    const response = await fetch("/api/lists/" + id, {
+    const response = await fetch("https://todo-list-backend-694w.onrender.com/api/lists/" + id, {
       method: "PATCH",
       body: JSON.stringify(updatedList),
       headers: {
