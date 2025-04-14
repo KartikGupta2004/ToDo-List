@@ -26,6 +26,8 @@ function Login() {
           }
         );
         if(userInfoResponse.ok){
+          console.log(response);
+          console.log(userInfoResponse);
         const userInfo = await userInfoResponse.json();
         const userEmail = userInfo.email;
         await login(userEmail, process.env.REACT_APP_DEFAULT_PASSWORD);

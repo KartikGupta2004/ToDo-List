@@ -1,11 +1,18 @@
 const express = require('express')
 const mongoose = require('mongoose')
-
+const cors = require('cors')
 require('dotenv').config()
-
-const app = express()
 const listRoutes = require('./routes/listRoutes')
 const userRoutes = require('./routes/user')
+const app = express()
+const corsOptions = {
+    origin: 'http://localhost:3000',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+  };
+  
+app.use(cors(corsOptions));
+
 //Middleware
 app.use(express.json())
 

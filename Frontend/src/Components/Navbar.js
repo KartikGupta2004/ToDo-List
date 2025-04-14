@@ -23,7 +23,7 @@ function Navbar() {
             <li>Home</li>
           </Link>
           <Link to="/about">
-            <li>About Us</li>
+            <li>About Me</li>
           </Link>
           <Link to="/create">
             <li>New List</li>

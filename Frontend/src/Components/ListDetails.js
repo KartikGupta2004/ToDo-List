@@ -249,7 +249,7 @@ const ListDetails = ({ list }) => {
                     />
                     {!completed && <div className="flex">
                     <button
-                      className="bg-orange-600 text-white px-2 py-1 text-md rounded-lg hover:bg-orange-500 mr-3"
+                      className="bg-pink-500 text-white px-2 py-1 text-md rounded-lg hover:bg-pink-400 mr-3"
                       onClick={() => handleSaveSteps(index)}
                       disabled={saveStatus[index]}
                     >
@@ -295,7 +295,7 @@ const ListDetails = ({ list }) => {
         </div>
         <div className="flex justify-end mt-2">
           <button
-            className="flex items-center bg-red-600 text-white px-2 py-1 text-lg rounded-lg hover:bg-red-500 mr-3"
+            className="flex items-center bg-blue-600 text-white px-2 py-1 text-lg rounded-lg hover:bg-blue-500 mr-3"
             onClick={addStep}
           >
             <IoMdAdd className="mr-1" />

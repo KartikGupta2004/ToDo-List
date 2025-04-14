@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {useListsContext} from '../Hooks/useListsContext'
 import {toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -14,6 +14,28 @@ const Update = () => {
   const [emptyFields, setEmptyFields] = useState([]);
   const [navigate,setNavigate]=useState("");
   const { id } = useParams();
+
+  useEffect(() => {
+      const fetchLists = async () => {
+        const response = await fetch(`/api/lists/${id}`,{
+          headers:{
+            method: "GET",
+            'Authorization':`Bearer ${user.token}`
+          }
+        });
+        if (response.ok) {
+          const json = await response.json();
+          setTitle(json.title)
+          setDate(json.dueDate.split("T")[0])
+          setNote(json.note)
+        }
+      };
+  
+      if(user){
+        fetchLists();
+      }
+    }, [user, id]);
+    
   const handleSubmit = async (e) => {
     e.preventDefault();
     if(!user){
@@ -33,15 +55,11 @@ const Update = () => {
     // Check if note is empty
     const noteToSend = note.trim() !== "" ? note : "-";
 
-    // Fetch the current list data
-    const res = await fetch("/api/lists/" + id);
-    const currentList = await res.json();
-
     // Update only the fields that have been changed by the user
     const updatedList = {
-      title: title !== "" ? title : currentList.title,
-      dueDate: date !== "" ? formattedDate : currentList.dueDate,
-      note: note !== "" ? note : currentList.note
+      title,
+      dueDate : formattedDate,
+      note: noteToSend
     };
 
     const response = await fetch("/api/lists/" + id, {
