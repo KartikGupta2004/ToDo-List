@@ -7,7 +7,7 @@ const userRoutes = require('./routes/user')
 const app = express()
 const corsOptions = {
     origin: 'https://todo-list-frontend-flyu.onrender.com',
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH],
     allowedHeaders: ['Content-Type', 'Authorization'],
   };
   
