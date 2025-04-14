@@ -14,7 +14,7 @@ function AllLists() {
 
   useEffect(() => {
     const fetchLists = async () => {
-      const response = await fetch("/api/lists",{
+      const response = await fetch("https://todo-list-backend-694w.onrender.com/api/lists",{
         headers:{
           'Authorization':`Bearer ${user.token}`
         }
