@@ -6,7 +6,7 @@ const listRoutes = require('./routes/listRoutes')
 const userRoutes = require('./routes/user')
 const app = express()
 const corsOptions = {
-    origin: 'http://localhost:3000',
+    origin: 'https://todo-list-frontend-s1v4.onrender.com',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
   };
