@@ -6,8 +6,8 @@ const listRoutes = require('./routes/listRoutes')
 const userRoutes = require('./routes/user')
 const app = express()
 const corsOptions = {
-    origin: 'http://localhost:3000',
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    origin: 'https://todo-list-frontend-flyu.onrender.com',
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
     allowedHeaders: ['Content-Type', 'Authorization'],
   };
   

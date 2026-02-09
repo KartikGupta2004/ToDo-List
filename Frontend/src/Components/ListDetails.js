@@ -34,7 +34,7 @@ const ListDetails = ({ list }) => {
     if (!user) {
       return;
     }
-    const response = await fetch("/api/lists/" + list._id, {
+    const response = await fetch("https://todo-list-backend-694w.onrender.com/api/lists/" + list._id, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${user.token}`,
@@ -124,7 +124,7 @@ const ListDetails = ({ list }) => {
       // Check if the step has been saved before
       const isNewStep = !saveStatus[index];
   
-      const response = await fetch(`/api/lists/${list._id}`, {
+      const response = await fetch(`https://todo-list-backend-694w.onrender.com/api/lists/${list._id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -158,7 +158,7 @@ const ListDetails = ({ list }) => {
   
   const handleToggleSteps = async (index) => {
     try {
-        const response = await fetch(`/api/lists/${list._id}`, {
+        const response = await fetch(`https://todo-list-backend-694w.onrender.com/api/lists/${list._id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -202,7 +202,7 @@ const ListDetails = ({ list }) => {
       setSaveStatus((prev) => prev.filter((_, i) => i !== index));
   
       // Send a PATCH request to update the list in the database
-      const response = await fetch(`/api/lists/${list._id}`, {
+      const response = await fetch(`https://todo-list-backend-694w.onrender.com/api/lists/${list._id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
