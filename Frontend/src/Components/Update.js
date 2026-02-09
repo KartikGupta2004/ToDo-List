@@ -17,12 +17,12 @@ const Update = () => {
 
   useEffect(() => {
       const fetchLists = async () => {
-        const response = await fetch(`/api/lists/${id}`,{
-          headers:{
-            method: "GET",
-            'Authorization':`Bearer ${user.token}`
+        const response = await fetch(`/api/lists/${id}`, {
+          method: "GET",
+          headers: {
+            'Authorization': `Bearer ${user.token}`
           }
-        });
+        });        
         if (response.ok) {
           const json = await response.json();
           setTitle(json.title)
